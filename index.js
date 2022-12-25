@@ -17,7 +17,7 @@ await client.connect();
 console.log("MongDB connected");
 
 app.get("/", function (request, response) {
-  response.send("🙋‍♂️, 🌏 Today is pretty nice day...");
+  response.send("Have nice day...");
 });
 
 app.use(express.json()) // middleware
