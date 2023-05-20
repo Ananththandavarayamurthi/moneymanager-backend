@@ -27,5 +27,5 @@ export async function UpdateMoney(id, data) {
 }
 
 export async function createMoney(data) {
-    return await client.db('mango').collection('money').insertMany(data);
+    return await client.db('mango').collection('money').insertOne(data);
 }
