@@ -1,5 +1,5 @@
 import { client } from '../index.js';
-
+import { ObjectId } from "mongodb";
 
 export async function getMoney(request) {
     return await client.db('mango').collection('money').find(request.query).toArray();
@@ -16,7 +16,7 @@ export async function DeleteMoney(id) {
     return await client
         .db("mango")
         .collection("money")
-        .deleteOne({ id: id });
+        .deleteOne({ _id: ObjectId(id) });
 }
 
 export async function UpdateMoney(id, data) {
